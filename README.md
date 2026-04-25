@@ -1,147 +1,132 @@
-# Ai-Assisted-PowerBi-Workflows
-A practical framework for using AI to support Power BI development, DAX refinement, dashboard prototyping, documentation, and workflow standardization.
+# AI-Assisted Power BI Workflows
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Power%20BI-Development-blue" />
+  <img src="https://img.shields.io/badge/AI-Workflow%20Acceleration-blue" />
+  <img src="https://img.shields.io/badge/DAX-Refinement-blue" />
+  <img src="https://img.shields.io/badge/Documentation-Standardized-blue" />
+  <img src="https://img.shields.io/badge/Prompt%20Engineering-Patterns-blue" />
+</p>
+
+A practical framework for using AI to accelerate Power BI development without giving up business judgment, validation, or accountability. Documents the human + AI ownership split across the full BI lifecycle, with prompt patterns, DAX debugging examples, and reusable templates.
 
 ---
 
-## Overview
+> [!IMPORTANT]
+> AI supports the work · the human owns the decision-making. This framework is built around that principle. Examples may use sample, recreated, or masked content to protect confidentiality while still showing process, structure, and problem-solving methods.
 
-This repository documents a practical approach for using AI to support Power BI development in a structured, business-focused way. It is designed to show how AI can improve reporting workflows without replacing human judgment, validation, or stakeholder alignment.
+![Human + AI workflow](images/01-human-ai-workflow.png)
 
-The examples in this repository focus on real-world BI tasks such as:
-- DAX troubleshooting
-- report prototyping
-- KPI documentation
-- semantic model documentation
-- issue resolution tracking
-- workflow standardization
+---
 
-The goal is not to automate thinking, but to use AI to improve speed, consistency, and clarity across the BI development process.
+## Business Questions This Project Answers
+
+| Question | Where it's addressed |
+|---|---|
+| **How can we shorten BI development cycles without sacrificing quality?** | 9-stage workflow with explicit ownership lanes |
+| **Where in the development cycle does AI add the most value?** | Stages 4–7 are AI-assisted; stages 1, 2, 8 stay human-led |
+| **How do we structure prompts so AI output is usable, not generic?** | Prompt taxonomy with five reusable categories |
+| **What's the human / AI split that keeps accountability intact?** | Ownership matrix — what AI assists vs what the human owns |
+| **How do we standardize documentation so handoff and audit get easier?** | Data dictionary, KPI definition, and report-spec templates |
+| **What's the troubleshooting pattern for common DAX issues?** | Three worked debugging examples with before / after measures |
+| **How do we capture reasoning during issue resolution?** | Issue-to-resolution log format |
+| **What are the limits of AI in BI development?** | Explicit benefits + limitations section |
 
 ---
 
 ## Why This Matters
 
-Business intelligence work often involves repetitive tasks that can slow down delivery, such as drafting documentation, refining measure logic, organizing report requirements, or troubleshooting calculations.
+BI work involves repetitive tasks that slow delivery — drafting documentation, refining measures, organizing requirements, troubleshooting calculations. A structured AI-assisted workflow can:
 
-A structured AI-assisted workflow can help:
-- reduce repetitive manual work
-- speed up first drafts and iteration cycles
-- improve consistency in documentation
-- support faster troubleshooting and problem framing
-- make report development more scalable and repeatable
+- Reduce repetitive manual work
+- Speed up first drafts and iteration cycles
+- Improve consistency in documentation
+- Support faster troubleshooting and problem framing
+- Make report development more scalable and repeatable
 
-Used properly, AI can act as a practical assistant that helps BI professionals move faster while still maintaining quality, control, and business context.
+Used properly, AI is a practical assistant that helps BI professionals move faster while still maintaining quality, control, and business context.
 
----
-
-## Human + AI Development Model
-
-This workflow is based on a simple principle:
-
-> AI supports the work. The human owns the decision-making.
-
-AI is useful for:
-- brainstorming possible approaches
-- generating first drafts
-- refining DAX logic
-- formatting documentation
-- suggesting troubleshooting paths
-- organizing requirements into structured templates
-
-The human remains responsible for:
-- business judgment
-- KPI definitions
-- semantic model validation
-- final QA and testing
-- stakeholder communication
-- determining what is actually useful and accurate
-
-This distinction is critical. AI can accelerate the process, but it should not replace business understanding, data validation, or accountability.
+![Impact diagram](images/04-impact-diagram.png)
 
 ---
 
-## Workflow Stages
+## Human + AI Ownership Model
 
-A practical AI-assisted Power BI workflow can be broken into the following stages:
+This workflow is built on a single principle:
 
-### 1. Define the business problem
-Clarify the audience, decision need, KPI goals, and reporting expectations.
+> **AI supports the work. The human owns the decision-making.**
 
-### 2. Gather requirements
-Identify business questions, required visuals, filters, timeframes, and measures.
+![Ownership split](images/03-human-vs-ai.png)
 
-### 3. Structure the data model
-Review tables, relationships, dimensions, facts, and any gaps in the semantic model.
-
-### 4. Draft KPI definitions
-Use AI to help structure definitions, naming conventions, and calculation notes.
-
-### 5. Develop report layout
-Prototype dashboard structure, page flow, visual hierarchy, and business-friendly wording.
-
-### 6. Build and refine DAX
-Use AI to help troubleshoot logic, improve readability, and suggest alternate patterns.
-
-### 7. Document the report
-Create data dictionaries, report specs, KPI definitions, and handoff notes.
-
-### 8. Validate with users
-Confirm the dashboard supports business needs and that results are accurate and usable.
-
-### 9. Finalize and improve
-Refine layout, calculations, documentation, and workflow assets for future reuse.
+This distinction is critical. AI can accelerate the process, but it cannot replace business understanding, data validation, or accountability.
 
 ---
 
-## Prompt Patterns
+## The 9-Stage Workflow
 
-Below are sample prompt categories that can support BI development work.
+Each stage is tagged with its ownership lane so it's clear where AI accelerates vs where the human stays in control.
 
-### DAX development prompts
-- Review this DAX measure and explain why the totals may be incorrect.
-- Rewrite this measure for better readability and maintainability.
-- Suggest an alternative pattern for calculating rolling averages.
-- Explain the difference between row context and filter context in this example.
+| # | Stage | Lane | What happens |
+|---|---|---|---|
+| 1 | Define the business problem | Human-led | Audience, decision need, KPI goals, reporting expectations |
+| 2 | Gather requirements | Human-led | Business questions, required visuals, filters, timeframes |
+| 3 | Structure the data model | Shared | Tables, relationships, dimensions, facts, gaps |
+| 4 | Draft KPI definitions | AI-assisted | Naming, calculation notes, business-friendly wording |
+| 5 | Develop report layout | AI-assisted | Page flow, visual hierarchy, layout prototypes |
+| 6 | Build and refine DAX | AI-assisted | Patterns, troubleshooting, alternative formulations |
+| 7 | Document the report | AI-assisted | Data dictionaries, report specs, handoff notes |
+| 8 | Validate with users | Human-led | Confirm accuracy, usability, business fit |
+| 9 | Finalize and improve | Shared | Refine logic, layout, documentation, reusable assets |
 
-### KPI definition prompts
-- Draft a business-friendly KPI definition for executive reporting.
-- Rewrite this KPI description for a non-technical audience.
-- Create a consistent KPI definition table for these measures.
+---
 
-### Documentation prompts
-- Generate a data dictionary for the following columns.
-- Draft semantic model documentation for these tables and relationships.
-- Create a report specification outline for an operations dashboard.
+## Prompt Pattern Taxonomy
 
-### Dashboard design prompts
-- Suggest a dashboard layout for an executive audience.
-- Recommend KPI card hierarchy for a performance reporting page.
-- Propose a cleaner visual structure for a dashboard with too many competing priorities.
+Five categories of reusable BI prompts. Use them as starting points; always validate output against business context and data.
 
-### Troubleshooting prompts
-- Identify possible causes of incorrect totals in this matrix visual.
-- Suggest validation steps for a measure that appears inconsistent across filters.
-- Help create a test checklist for verifying KPI accuracy.
+![Prompt categories](images/02-prompt-categories.png)
+
+### DAX development
+- Review this DAX measure and explain why the totals may be incorrect
+- Rewrite this measure for better readability and maintainability
+- Suggest an alternative pattern for calculating rolling averages
+- Explain row context vs filter context in this example
+
+### KPI definitions
+- Draft a business-friendly KPI definition for executive reporting
+- Rewrite this KPI description for a non-technical audience
+- Create a consistent KPI definition table for these measures
+
+### Documentation
+- Generate a data dictionary for the following columns
+- Draft semantic model documentation for these tables and relationships
+- Create a report specification outline for an operations dashboard
+
+### Dashboard design
+- Suggest a dashboard layout for an executive audience
+- Recommend KPI card hierarchy for a performance reporting page
+- Propose a cleaner visual structure for a dashboard with too many competing priorities
+
+### Troubleshooting
+- Identify possible causes of incorrect totals in this matrix visual
+- Suggest validation steps for a measure that appears inconsistent across filters
+- Help create a test checklist for verifying KPI accuracy
 
 ---
 
 ## DAX Debugging Examples
 
-### Example 1: Incorrect total in a matrix
+### Example 1 — Incorrect total in a matrix
 
-**Problem:**  
-A measure returns correct values at the row level but the grand total appears incorrect.
+**Problem:** measure returns correct row values, but the grand total is wrong.
 
-**Original measure:**
+**Original (anti-pattern):**
 ```DAX
 Open Cases =
 IF(Operations[Status] = "Open", 1, 0)
 ```
 
-**Why it is problematic:**  
-This logic works at the row level but does not aggregate properly as a measure for reporting.
-
-**Improved measure:**
+**Improved:**
 ```DAX
 Open Cases =
 CALCULATE(
@@ -150,42 +135,34 @@ CALCULATE(
 )
 ```
 
-**AI-assisted value:**  
-AI can help identify when a calculated column pattern is being used where a measure is more appropriate.
-
-**Human validation required:**  
-Confirm that the final total matches expected business logic and filtered report output.
+**AI assist:** identifying that a calculated-column pattern is being used where a measure is more appropriate.
+**Human validation:** confirm the final total matches expected business logic and filtered report output.
 
 ---
 
-### Example 2: Completion rate needs safe division
+### Example 2 — Completion rate needs safe division
 
-**Problem:**  
-A KPI may return errors or blanks if the denominator is zero.
+**Problem:** measure returns errors or blanks when the denominator is zero.
 
-**Original measure:**
+**Original:**
 ```DAX
 Completion Rate = [Completed Items] / [Total Items]
 ```
 
-**Improved measure:**
+**Improved:**
 ```DAX
 Completion Rate =
 DIVIDE([Completed Items], [Total Items], 0)
 ```
 
-**AI-assisted value:**  
-AI can suggest safer and more readable DAX patterns quickly.
-
-**Human validation required:**  
-Verify that returning `0` is the correct business behavior when no total items exist.
+**AI assist:** suggest safer, more readable DAX patterns quickly.
+**Human validation:** verify that returning `0` is the correct business behavior when no total items exist.
 
 ---
 
-### Example 3: Average resolution days calculation
+### Example 3 — Average resolution days
 
-**Problem:**  
-Need to calculate average duration between open and close dates for completed cases only.
+**Problem:** calculate average duration between open and close dates for completed cases only.
 
 **Measure:**
 ```DAX
@@ -196,159 +173,102 @@ AVERAGEX(
 )
 ```
 
-**AI-assisted value:**  
-AI can help structure the initial formula and explain each part of the logic.
-
-**Human validation required:**  
-Confirm that the population being averaged matches the intended KPI definition.
-
----
-
-## Report Prototyping Workflow
-
-A strong AI-assisted prototyping workflow should still begin with business clarity.
-
-### Step 1: Define the audience
-Identify whether the dashboard is intended for executives, managers, analysts, or operations teams.
-
-### Step 2: Clarify the business questions
-Determine what decisions the report should support.
-
-### Step 3: Identify the core KPIs
-List the top measures users need to see first.
-
-### Step 4: Sketch the layout
-Map out KPI cards, trend charts, breakdowns, and detail tables.
-
-### Step 5: Use AI to refine structure
-Use AI to suggest visual grouping, dashboard hierarchy, page naming, and wording.
-
-### Step 6: Build the first draft
-Create a working report version in Power BI.
-
-### Step 7: Validate with users
-Review whether the design answers the intended business questions.
-
-### Step 8: Refine and simplify
-Improve layout, logic, labels, and documentation based on feedback.
-
-This process keeps AI in a supporting role while preserving business ownership and user-centered design.
+**AI assist:** structure the initial formula and explain each part of the logic.
+**Human validation:** confirm that the population being averaged matches the intended KPI definition.
 
 ---
 
 ## Documentation Templates
 
-This repository includes templates that support cleaner BI delivery and handoff.
+Three reusable templates that support cleaner BI delivery and handoff.
 
-### Data Dictionary Template
-Used to document:
-- field name
-- business definition
-- source table
-- data type
-- transformation notes
-- usage notes
+| Template | Used to document |
+|---|---|
+| **Data Dictionary** | Field name · business definition · source table · data type · transformation notes · usage notes |
+| **KPI Definition** | KPI name · formula · business meaning · owner · caveats · validation method |
+| **Report Specification** | Report name · audience · business objective · KPIs · visuals · filters · refresh cadence · validation notes |
 
-### KPI Definition Template
-Used to document:
-- KPI name
-- formula
-- business meaning
-- owner
-- caveats
-- validation method
-
-### Report Specification Template
-Used to document:
-- report name
-- audience
-- business objective
-- KPIs
-- visuals
-- filters
-- refresh cadence
-- validation notes
-
-These templates help standardize report development and improve communication across technical and business audiences.
+These standardize report development and improve communication across technical and business audiences.
 
 ---
 
 ## Issue-to-Resolution Logs
 
-Issue logs help document how problems were identified, explored, and resolved during report development.
+Issue logs capture how problems were identified, explored, and resolved during development.
 
 | Issue | AI Support Used For | Human Validation Step | Final Resolution |
 |---|---|---|---|
-| Incorrect total in matrix | Suggested possible DAX filter context issues | Tested against filtered report views | Updated measure logic |
-| KPI description unclear | Drafted business-friendly wording | Reviewed wording for stakeholder clarity | Revised KPI definition |
-| Dashboard too cluttered | Suggested cleaner layout hierarchy | Compared against business priorities | Simplified top-level report design |
-| Missing documentation | Generated initial report spec draft | Validated against actual report requirements | Completed final documentation |
+| Incorrect total in matrix | Suggested possible filter-context issues | Tested against filtered report views | Updated measure logic |
+| KPI description unclear | Drafted business-friendly wording | Reviewed for stakeholder clarity | Revised KPI definition |
+| Dashboard too cluttered | Suggested cleaner layout hierarchy | Compared against business priorities | Simplified top-level design |
+| Missing documentation | Generated initial report spec draft | Validated against actual requirements | Completed final documentation |
 
 This kind of logging creates a useful record of reasoning, iteration, and quality control.
 
 ---
 
-## Benefits and Limitations
+## Benefits and Limits
 
 ### Benefits
-- speeds up draft creation
-- improves documentation consistency
-- helps frame troubleshooting faster
-- supports reusable workflow patterns
-- reduces repetitive reporting tasks
-- improves process standardization
+- Faster first drafts
+- Improved documentation consistency
+- Better troubleshooting framing
+- Reusable workflow patterns
+- Lower repetitive reporting overhead
+- Improved process standardization
 
-### Limitations
+### Limits
 - AI can suggest incorrect logic
 - DAX recommendations still require testing
 - KPI definitions still need business alignment
-- dashboard design still requires stakeholder context
-- semantic models still need careful validation
-- final accountability remains with the human developer
+- Dashboard design still requires stakeholder context
+- Semantic models still need careful validation
+- Final accountability remains with the human developer
 
-The strongest use of AI in BI is not blind automation. It is disciplined augmentation.
+The strongest use of AI in BI is not blind automation. It is **disciplined augmentation**.
 
 ---
 
-## Files in This Repository
+## Tech Stack
 
-```text
-/docs
-  overview.md
-  report-prototyping-workflow.md
+- **Power BI Desktop** — authoring and validation surface
+- **DAX** — measure refinement, troubleshooting, alternative patterns
+- **Power Query (M)** — ETL standardization
+- **Markdown templates** — data dictionary, KPI specs, report specs
+- **Prompt patterns** — reusable categories for common BI tasks
 
-/prompts
-  bi-prompt-patterns.md
+---
 
-/examples
-  dax-debugging-examples.md
+## Repository Layout
 
-/templates
-  data-dictionary-template.md
-  kpi-definition-template.md
-  report-spec-template.md
-
-/logs
-  issue-resolution-log.md
-
-/images
-  human-ai-workflow.png
+```
+ai-assisted-powerbi-workflows/
+├── README.md
+├── docs/
+│   ├── overview.md
+│   └── report-prototyping-workflow.md
+├── examples/
+│   └── dax-debugging-examples.md
+├── prompts/
+│   └── bi-prompt-patterns.md
+├── templates/
+│   ├── data-dictionary-template.md
+│   ├── kpi-definition-template.md
+│   └── report-spec-template.md
+├── logs/
+│   └── issue-resolution-log.md
+├── images/
+│   ├── 01-human-ai-workflow.png
+│   ├── 02-prompt-categories.png
+│   ├── 03-human-vs-ai.png
+│   └── 04-impact-diagram.png
+└── scripts/
+    └── generate_visuals.py
 ```
 
-### Suggested file purpose
-
-- `overview.md` — expanded write-up of the workflow approach
-- `report-prototyping-workflow.md` — process for designing reports with AI assistance
-- `bi-prompt-patterns.md` — reusable prompt examples for common BI tasks
-- `dax-debugging-examples.md` — sample troubleshooting scenarios
-- `data-dictionary-template.md` — reusable field documentation template
-- `kpi-definition-template.md` — reusable KPI documentation template
-- `report-spec-template.md` — reusable report requirements template
-- `issue-resolution-log.md` — examples of issue tracking and resolution
-- `human-ai-workflow.png` — visual diagram of the workflow model
-
 ---
 
-## Notes
+## Connect
 
-This repository is intended to demonstrate a practical, responsible approach to AI-assisted BI development. Examples may use sample, recreated, or masked content to protect confidentiality while still showing process, structure, and problem-solving methods.
+- 🔗 [LinkedIn](https://www.linkedin.com/in/jas0n-ch0i/)
+- 📧 [Email me](mailto:jchoi815@gmail.com)
